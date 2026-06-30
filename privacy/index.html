@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budgeti Privacy Policy</title>
+  <script>
+    (function () {
+      var supported = {
+        fr: '../privacy-fr.html',
+        de: '../privacy-de.html',
+        pt: '../privacy-pt.html',
+        en: '../privacy-en.html'
+      };
+      var languages = navigator.languages || [navigator.language || 'en'];
+      var target = '../privacy-en.html';
+      for (var i = 0; i < languages.length; i++) {
+        var code = String(languages[i]).toLowerCase().split('-')[0];
+        if (supported[code]) {
+          target = supported[code];
+          break;
+        }
+      }
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  <h1>Budgeti Privacy Policy</h1>
+  <p>Please choose your language:</p>
+  <ul>
+    <li><a href="../privacy-fr.html">Français</a></li>
+    <li><a href="../privacy-en.html">English</a></li>
+    <li><a href="../privacy-de.html">Deutsch</a></li>
+    <li><a href="../privacy-pt.html">Português</a></li>
+  </ul>
+</body>
+</html>
+
